@@ -48,4 +48,4 @@ jobs:
         app-name: 'productservicebackend'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e17777c016624cab9906ca21a5ade2c7 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_798949e6488a44cba9afef453b76393a }}/pramudithsj/productcatlogservice:${{ github.sha }}'
+        images: 'index.docker.io/pramudithsj/productcatlogservice:main'
