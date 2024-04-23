@@ -5,12 +5,8 @@ const dotenv = require('dotenv');
 dotenv.config(); // Load environment variables from .env file
 const app = express();
 
-// Middleware setup
-app.use(express.json());
-app.use('/api', productRoutes); // Use product routes under '/api' prefix
-
 // MongoDB Atlas connection URI
-const MONGODB_URI = process.env.MONGODB_URI; // Access MONGODB_URI from environment variables
+const MONGODB_URI = "mongodb+srv://kushanmigara:wWVe0ShwhtfIt2Ru@cluster0.xa9p9st.mongodb.net/" // Access MONGODB_URI from environment variables
 
 // Connect to MongoDB Atlas
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -20,3 +16,8 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
 // Start Express server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+// Middleware setup
+app.use(express.json());
+app.use('/api', productRoutes); // Use product routes under '/api' prefix
