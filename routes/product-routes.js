@@ -12,7 +12,7 @@ router.get('/products', productController.getAllProducts);
 router.get('/products/:id', productController.getProductById);
 
 // Create a new product
-router.post('/products', productController.createProduct);
+router.post('/product', productController.createProduct);
 
 // Update a product by ID
 router.put('/products/:id', productController.updateProduct);
