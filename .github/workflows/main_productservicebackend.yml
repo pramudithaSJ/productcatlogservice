@@ -45,7 +45,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Make sure to add this secret in your repository settings
         with:
           args: >
-            -Dsonar.organization=pramudithsj
+            -Dsonar.organization=pramudithasj
             -Dsonar.projectKey=productcatlogservice
   deploy:
     runs-on: ubuntu-latest
