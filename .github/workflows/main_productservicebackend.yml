@@ -46,7 +46,7 @@ jobs:
         with:
           args: >
             -Dsonar.organization=pramudithsj
-            -Dsonar.projectKey=pramudithsj_productcatlogservice
+            -Dsonar.projectKey=productcatlogservice
   deploy:
     runs-on: ubuntu-latest
     needs: [build, sonarcloud]
