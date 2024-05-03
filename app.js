@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const productRoutes = require('./routes/product-routes');
 const dotenv = require('dotenv'); 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config(); 
 const app = express();
 
 // MongoDB Atlas connection URI
-const MONGODB_URI = "mongodb+srv://kushanmigara:wWVe0ShwhtfIt2Ru@cluster0.xa9p9st.mongodb.net/" // Access MONGODB_URI from environment variables
+const MONGODB_URI = "mongodb+srv://kushanmigara:wWVe0ShwhtfIt2Ru@cluster0.xa9p9st.mongodb.net/" 
 
 // Connect to MongoDB Atlas
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -20,4 +20,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // Middleware setup
 app.use(express.json());
-app.use('/api', productRoutes); // Use product routes under '/api' prefix
+app.use('/api', productRoutes); 
