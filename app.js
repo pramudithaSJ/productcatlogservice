@@ -20,4 +20,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // Middleware setup
 app.use(express.json());
-app.use('/apiV1', productRoutes); 
+app.use('/api', productRoutes); 
