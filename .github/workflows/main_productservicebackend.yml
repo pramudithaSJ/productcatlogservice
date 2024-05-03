@@ -43,9 +43,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Make sure to add this secret in your repository settings
-        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }} # Reference the SonarCloud project key secret
-        SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} # Reference the SonarCloud organization key secret
-
+      with:
+        projectBaseDir: ./productcatlogservice
+        organization: "pramudithsj"
+        projectKey: "pramudithsj_productcatlogservice"
   deploy:
     runs-on: ubuntu-latest
     needs: [build, sonarcloud]
