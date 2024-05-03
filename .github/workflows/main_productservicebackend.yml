@@ -44,7 +44,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Make sure to add this secret in your repository settings
       with:
-        projectBaseDir: ./productcatlogservice
         organization: "pramudithsj"
         projectKey: "pramudithsj_productcatlogservice"
   deploy:
