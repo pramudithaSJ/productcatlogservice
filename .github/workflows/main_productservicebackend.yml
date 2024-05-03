@@ -41,10 +41,10 @@ jobs:
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Make sure to add this secret in your repository settings
-        SONAR_PROJECT_KEY: pramudithaSJ_productcatlogservice # Replace with your SonarCloud project key
-        SONAR_ORGANIZATION: pramudithasj # Replace with your SonarCloud organization key
+        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }} # Reference the SonarCloud project key secret
+        SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} # Reference the SonarCloud organization key secret
 
   deploy:
     runs-on: ubuntu-latest
