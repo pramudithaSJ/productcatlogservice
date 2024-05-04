@@ -118,7 +118,10 @@ exports.deleteProduct = async (req, res) => {
         errorMessages: "Product not found",
       });
     }
-    await product.remove();
+    console.log(product);
+
+    const result = await Product.findByIdAndDelete(req.params.id);
+    
     res.json({
       message: "Product Deleted Successfully",
       status: 200,
